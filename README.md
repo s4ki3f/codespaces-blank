@@ -105,3 +105,16 @@ This project provides a RESTful API for managing users, roles, and permissions. 
 
 ```sh
 php artisan serve
+```
+##Access the application:
+Open your browser and navigate to http://127.0.0.1:8000.
+
+#API Documentation
+For detailed API documentation, please refer to the API_DOCUMENTATION.md file.
+
+
+Conclusion
+This documentation provides an overview of the available endpoints for managing users, roles, and permissions in the User Management API. Ensure you include the Authorization header with a valid access token for all protected routes.
+
+For further assistance, refer to the Laravel Passport and Spatie Laravel Permission documentation.
+
