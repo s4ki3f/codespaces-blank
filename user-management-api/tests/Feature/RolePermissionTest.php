@@ -1,17 +1,19 @@
 <?php
+
 namespace Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
+use App\Models\User;
 use App\Models\Role;
 use App\Models\Permission;
-use App\Models\User;
+use PHPUnit\Framework\Attributes\Test;
 
 class RolePermissionTest extends TestCase
 {
     use RefreshDatabase;
 
-    /** @test */
+    #[Test]
     public function a_role_can_be_assigned_to_a_user()
     {
         $user = User::factory()->create();
@@ -22,7 +24,7 @@ class RolePermissionTest extends TestCase
         $this->assertTrue($user->roles->contains($role));
     }
 
-    /** @test */
+    #[Test]
     public function a_permission_can_be_assigned_to_a_role()
     {
         $role = Role::factory()->create();
@@ -33,7 +35,7 @@ class RolePermissionTest extends TestCase
         $this->assertTrue($role->permissions->contains($permission));
     }
 
-    /** @test */
+    #[Test]
     public function a_permission_can_be_assigned_to_a_user()
     {
         $user = User::factory()->create();
